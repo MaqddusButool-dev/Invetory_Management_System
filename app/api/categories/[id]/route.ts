@@ -127,7 +127,7 @@ export async function DELETE(
           category.products.map(product => 
             tx.product.update({
               where: { id: product.id },
-              data: { categoryId: null }
+              data: { categoryId: undefined }
             })
           )
         );

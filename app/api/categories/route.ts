@@ -89,7 +89,7 @@ export async function POST(req: Request) {
     }
 
     const category = await prisma.category.create({
-      data: validatedData,
+      data: validatedData as any,
       include: {
         _count: {
           select: {
@@ -98,7 +98,6 @@ export async function POST(req: Request) {
         },
       },
     });
-
     return NextResponse.json(category);
   } catch (error) {
     console.error("[CATEGORIES_POST]", error);

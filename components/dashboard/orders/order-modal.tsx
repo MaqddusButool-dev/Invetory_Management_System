@@ -120,7 +120,7 @@ export function OrderModal({
     if (open) {
       form.reset(getDefaultValues());
     }
-  }, [open, order, getDefaultValues]);
+  }, [open, order, getDefaultValues, form]);
 
   useEffect(() => {
     const fetchProducts = async () => {

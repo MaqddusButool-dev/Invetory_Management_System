@@ -60,7 +60,7 @@ export function EditProductModal({ product, onClose }: EditProductModalProps) {
       });
       onClose();
     }
-  }, [product.status, onClose]);
+  }, [product.status, onClose, toast]);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
